@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  NewsApp
 //
-//  Created by Esraa Hassan on 7/31/19.
+//  Created by Radya Albasha on 7/31/19.
 //  Copyright © 2019 Ember. All rights reserved.
 //
 
