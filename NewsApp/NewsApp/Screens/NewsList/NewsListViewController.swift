@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class NewsListViewController: UIViewController{
+class NewsListViewController: UIViewController{ 
 
     @IBOutlet weak var newsTableView: UITableView!
     private var viewModel: NewsViewModel!
@@ -44,6 +44,12 @@ class NewsListViewController: UIViewController{
             
         }.disposed(by: disposeBag)
     }
+    
+    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return UITableViewAutomaticDimension
+        
+    }*/
 
 }
 

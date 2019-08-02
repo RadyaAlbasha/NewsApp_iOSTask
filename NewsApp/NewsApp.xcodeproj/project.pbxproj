@@ -14,6 +14,7 @@
 		BA18317D22F23948002E1153 /* NewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA18317B22F23948002E1153 /* NewsApp.xcdatamodeld */; };
 		BA18317F22F2396C002E1153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA18317E22F2396C002E1153 /* Assets.xcassets */; };
 		BA18318222F2396C002E1153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA18318022F2396C002E1153 /* LaunchScreen.storyboard */; };
+		BA38AE2722F4E5C900118976 /* FilterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38AE2622F4E5C900118976 /* FilterPopUpViewController.swift */; };
 		BA54DA7A22F34DA900644CA6 /* NetworkAccessClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DA7922F34DA900644CA6 /* NetworkAccessClass.swift */; };
 		BA54DA7C22F34DBE00644CA6 /* NetworkAccessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DA7B22F34DBE00644CA6 /* NetworkAccessProtocol.swift */; };
 		BA54DA8322F35A9200644CA6 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DA8122F35A9200644CA6 /* NewsTableViewCell.swift */; };
@@ -37,6 +38,7 @@
 		BA18317E22F2396C002E1153 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA18318122F2396C002E1153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA18318322F2396C002E1153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA38AE2622F4E5C900118976 /* FilterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPopUpViewController.swift; sourceTree = "<group>"; };
 		BA54DA7922F34DA900644CA6 /* NetworkAccessClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAccessClass.swift; sourceTree = "<group>"; };
 		BA54DA7B22F34DBE00644CA6 /* NetworkAccessProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAccessProtocol.swift; sourceTree = "<group>"; };
 		BA54DA8122F35A9200644CA6 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			path = NewsApp;
 			sourceTree = "<group>";
 		};
+		BA38AE2522F4D2FD00118976 /* FilterPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				BA38AE2622F4E5C900118976 /* FilterPopUpViewController.swift */,
+			);
+			path = FilterPopUp;
+			sourceTree = "<group>";
+		};
 		BA54DA7522F34C9200644CA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 			children = (
 				BA18317822F23948002E1153 /* Main.storyboard */,
 				BA54DA7D22F34E3700644CA6 /* NewsList */,
+				BA38AE2522F4D2FD00118976 /* FilterPopUp */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -311,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA18317722F23948002E1153 /* NewsListViewController.swift in Sources */,
+				BA38AE2722F4E5C900118976 /* FilterPopUpViewController.swift in Sources */,
 				BA54DA7A22F34DA900644CA6 /* NetworkAccessClass.swift in Sources */,
 				BA54DA8A22F37A1700644CA6 /* Article.swift in Sources */,
 				BA54DA8822F379FF00644CA6 /* News.swift in Sources */,
