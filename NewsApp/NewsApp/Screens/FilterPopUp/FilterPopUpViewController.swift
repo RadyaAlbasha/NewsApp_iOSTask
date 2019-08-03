@@ -14,12 +14,15 @@ class FilterPopUpViewController: UIViewController {
     
     @IBOutlet weak var filterBtn: UIButton!
     
+    @IBOutlet weak var popUpView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         UIMethodsClass.roundedView(rView: cancelBtn, radius: 15)
         UIMethodsClass.roundedView(rView: filterBtn, radius: 15)
+        UIMethodsClass.roundedView(rView: popUpView, radius: 15)
     }
 
     override func didReceiveMemoryWarning() {

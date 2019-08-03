@@ -258,6 +258,7 @@
                     <connections>
                         <outlet property="cancelBtn" destination="Von-ee-f8a" id="PgI-uA-30k"/>
                         <outlet property="filterBtn" destination="ep0-xq-dPK" id="z41-C3-IsG"/>
+                        <outlet property="popUpView" destination="JYa-HV-NIa" id="GNp-iF-SWG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMa-yh-Djd" sceneMemberID="firstResponder"/>
