@@ -15,6 +15,9 @@
 		BA18317F22F2396C002E1153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA18317E22F2396C002E1153 /* Assets.xcassets */; };
 		BA18318222F2396C002E1153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA18318022F2396C002E1153 /* LaunchScreen.storyboard */; };
 		BA38AE2722F4E5C900118976 /* FilterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38AE2622F4E5C900118976 /* FilterPopUpViewController.swift */; };
+		BA38AE2A22F5193500118976 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38AE2922F5193500118976 /* ArticleDetailsViewController.swift */; };
+		BA38AE2C22F5248E00118976 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38AE2B22F5248E00118976 /* CustomColor.swift */; };
+		BA38AE2E22F524EC00118976 /* UIColor-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38AE2D22F524EC00118976 /* UIColor-Extention.swift */; };
 		BA54DA7A22F34DA900644CA6 /* NetworkAccessClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DA7922F34DA900644CA6 /* NetworkAccessClass.swift */; };
 		BA54DA7C22F34DBE00644CA6 /* NetworkAccessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DA7B22F34DBE00644CA6 /* NetworkAccessProtocol.swift */; };
 		BA54DA8322F35A9200644CA6 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DA8122F35A9200644CA6 /* NewsTableViewCell.swift */; };
@@ -39,6 +42,9 @@
 		BA18318122F2396C002E1153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA18318322F2396C002E1153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA38AE2622F4E5C900118976 /* FilterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPopUpViewController.swift; sourceTree = "<group>"; };
+		BA38AE2922F5193500118976 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
+		BA38AE2B22F5248E00118976 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		BA38AE2D22F524EC00118976 /* UIColor-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extention.swift"; sourceTree = "<group>"; };
 		BA54DA7922F34DA900644CA6 /* NetworkAccessClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAccessClass.swift; sourceTree = "<group>"; };
 		BA54DA7B22F34DBE00644CA6 /* NetworkAccessProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAccessProtocol.swift; sourceTree = "<group>"; };
 		BA54DA8122F35A9200644CA6 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +121,14 @@
 			path = FilterPopUp;
 			sourceTree = "<group>";
 		};
+		BA38AE2822F518D100118976 /* ArticleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BA38AE2922F5193500118976 /* ArticleDetailsViewController.swift */,
+			);
+			path = ArticleDetails;
+			sourceTree = "<group>";
+		};
 		BA54DA7522F34C9200644CA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +145,7 @@
 				BA18317822F23948002E1153 /* Main.storyboard */,
 				BA54DA7D22F34E3700644CA6 /* NewsList */,
 				BA38AE2522F4D2FD00118976 /* FilterPopUp */,
+				BA38AE2822F518D100118976 /* ArticleDetails */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -176,6 +191,8 @@
 			children = (
 				BA54DA8E22F37BD100644CA6 /* UIMethodsClass.swift */,
 				BA54DA9022F37EA400644CA6 /* Constants.swift */,
+				BA38AE2B22F5248E00118976 /* CustomColor.swift */,
+				BA38AE2D22F524EC00118976 /* UIColor-Extention.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -329,8 +346,11 @@
 				BA54DA8F22F37BD100644CA6 /* UIMethodsClass.swift in Sources */,
 				BA54DA8322F35A9200644CA6 /* NewsTableViewCell.swift in Sources */,
 				BA54DA7C22F34DBE00644CA6 /* NetworkAccessProtocol.swift in Sources */,
+				BA38AE2C22F5248E00118976 /* CustomColor.swift in Sources */,
 				BA54DA8622F367E400644CA6 /* NewsViewModel.swift in Sources */,
+				BA38AE2E22F524EC00118976 /* UIColor-Extention.swift in Sources */,
 				BA18317522F23948002E1153 /* AppDelegate.swift in Sources */,
+				BA38AE2A22F5193500118976 /* ArticleDetailsViewController.swift in Sources */,
 				BA54DA8C22F37A3400644CA6 /* Source.swift in Sources */,
 				BA18317D22F23948002E1153 /* NewsApp.xcdatamodeld in Sources */,
 				BA54DA9122F37EA400644CA6 /* Constants.swift in Sources */,
