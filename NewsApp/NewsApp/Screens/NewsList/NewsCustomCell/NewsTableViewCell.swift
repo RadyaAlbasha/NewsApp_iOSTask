@@ -15,7 +15,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var headLineLabel: UILabel!
     
     @IBOutlet weak var dateLabel: UILabel!
-    
+    var articleDetails : Article?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

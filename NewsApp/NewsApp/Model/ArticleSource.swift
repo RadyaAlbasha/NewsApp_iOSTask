@@ -8,8 +8,8 @@
 
 import Foundation
 
-// MARK: - Source
-struct Source: Codable {
+// MARK: - ArticleSource
+struct ArticleSource: Codable {
     let id: String?
     let name: String
 }

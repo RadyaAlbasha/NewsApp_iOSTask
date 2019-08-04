@@ -18,6 +18,8 @@ class ArticleDetailsViewController: UIViewController {
     
     @IBOutlet weak var authorV: UIView!
     
+    @IBOutlet weak var authorView: UIView!
+    
     @IBOutlet weak var authorNameLabel: UILabel!
     
     @IBOutlet weak var articleTV: UITextView!
@@ -46,11 +48,25 @@ class ArticleDetailsViewController: UIViewController {
         UIMethodsClass.roundedView(rView: urlV, radius: 15)
         UIMethodsClass.roundedView(rView: urlView, radius: 15)
         UIMethodsClass.roundedView(rView: authorV, radius: 15)
+        UIMethodsClass.roundedView(rView: authorView, radius: 15)
         UIMethodsClass.roundedView(rView: headLineV, radius: 15)
         
         authorImage.tintColor = CustomColor.blueIcons
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        guard let article = articleDetails else{return}
+        if article.author != nil{
+            self.authorNameLabel.text = article.author!
+        }else{
+            self.authorNameLabel.text = "Unknown Author"
+        }
+        if article.articleDescription != nil{
+            self.articleTV.text = article.articleDescription!
+        }
+        self.sourceUrlLabel.text = article.url
+        self.headLineLabel.text = article.title
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
