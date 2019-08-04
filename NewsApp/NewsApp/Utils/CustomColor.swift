@@ -25,4 +25,7 @@ struct CustomColor {
     static let lemon = UIColor(red:1.00, green:1.00, blue:0.00, alpha:1.0)
     static let summerSky = UIColor(red:0.00, green:0.68, blue:1.00, alpha:1.0)
     static let blueIcons = UIColor(rgb: 0x4699DB)
+    static let lightCyan = UIColor(rgb: 0xEEF9F8)
+    static let lightGray = UIColor(rgb: 0xCCCCCC)
+    
 }

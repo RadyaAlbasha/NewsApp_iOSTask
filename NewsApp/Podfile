@@ -11,5 +11,6 @@ pod 'RxCocoa', '~> 4.1.2'
 pod 'RxAlamofire', '~> 4.2.0'
 pod 'SDWebImage', '~> 4.3.3'
 pod 'MaterialComponents', '~> 54.5.0'
+pod 'DLRadioButton', '~> 1.4'
 
 end

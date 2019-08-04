@@ -19,7 +19,7 @@ class FilterViewModel{
     init() {
         networkAccessDelegate = NetworkAccessClass()
         dataObservable = dataSubject.asObservable()
-        recieveNetworkResponse(requestURL: Constants.SOURCES_URL)
+        recieveNetworkResponse(requestURL: Constants.ALL_SOURCES_URL)
     }
     
     func recieveNetworkResponse(requestURL : String) {

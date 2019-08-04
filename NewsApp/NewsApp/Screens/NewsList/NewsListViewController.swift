@@ -29,6 +29,12 @@ class NewsListViewController: UIViewController{
             saveCountries()
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = newsTableView.indexPathForSelectedRow{
+            self.newsTableView.deselectRow(at: index, animated: true)
+        }
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
