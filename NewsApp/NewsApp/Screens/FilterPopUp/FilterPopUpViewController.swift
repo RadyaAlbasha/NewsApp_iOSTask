@@ -69,7 +69,12 @@ class FilterPopUpViewController: UIViewController {
         
         
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if CheckInternet.Connection() == false{
+            UIMethodsClass.showInternetConnectionAlert(viewController: self)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -121,6 +126,9 @@ class FilterPopUpViewController: UIViewController {
     }
     private func setupViewModel() {
         self.viewModel = FilterViewModel()
+        if CheckInternet.Connection() {
+            self.viewModel.recieveNetworkResponse(requestURL: Constants.ALL_SOURCES_URL)
+        }
     }
     private func setupCountryPickerViewBinding(countriesName : Array<String>) {
         //show data in picker
@@ -154,6 +162,7 @@ class FilterPopUpViewController: UIViewController {
         let selectedCountry = self.countryArr![countryRow]
         NSLog("selected: \(selectedCountry.code)")
         self.newsViewModel.recieveNetworkResponse(requestURL: "https://newsapi.org/v2/top-headlines?country=\(selectedCountry.code)&apiKey=\(Constants.API_KEY)")
+        self.newsViewModel.title = "\(String(selectedCountry.code).uppercased())"
     }
     
     private func filterBySource(){
@@ -161,6 +170,7 @@ class FilterPopUpViewController: UIViewController {
         let selectedSource = self.viewModel.sourcesArr[sourceRow]
         NSLog("selected: \(selectedSource.id)")
         self.newsViewModel.recieveNetworkResponse(requestURL: "https://newsapi.org/v2/top-headlines?sources=\(selectedSource.id)&apiKey=\(Constants.API_KEY)")
+        self.newsViewModel.title = "\(selectedSource.name)"
     }
     
     private func handleCountryPickerWhenChooseCountryAndSource(row : Int){

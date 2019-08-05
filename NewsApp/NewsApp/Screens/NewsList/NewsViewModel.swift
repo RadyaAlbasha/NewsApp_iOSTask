@@ -15,7 +15,7 @@ class NewsViewModel{
     let disposeBag = DisposeBag()
     var networkAccessDelegate : NetworkAccessProtocol?
     var networkResponse : Observable<(HTTPURLResponse,Any)>?
-    
+    var title:String?
     init() {
         networkAccessDelegate = NetworkAccessClass()
         dataObservable = dataSubject.asObservable()
@@ -38,7 +38,7 @@ class NewsViewModel{
                 }
             }
             
-        }).disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
         /*
         networkResponse?.subscribe(onNext: { [weak self] in
             if let dict = $0.1 as?[String:Any]{

@@ -30,12 +30,17 @@ class NewsListViewController: UIViewController{
         }
     }
     override func viewWillAppear(_ animated: Bool) {
+       if CheckInternet.Connection() == false{
+            UIMethodsClass.showInternetConnectionAlert(viewController: self)
+        }
         if let index = newsTableView.indexPathForSelectedRow{
             self.newsTableView.deselectRow(at: index, animated: true)
         }
-        
+        /*if viewModel.title != nil{
+            navigationItem.title = viewModel.title!
+        }*/
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,20 +48,29 @@ class NewsListViewController: UIViewController{
     
     private func setupViewModel() {
         self.viewModel = NewsViewModel()
-        self.viewModel.recieveNetworkResponse(requestURL : Constants.HEADLINES_URL)
+        if CheckInternet.Connection() {
+            self.viewModel.recieveNetworkResponse(requestURL : Constants.HEADLINES_URL)
+        }
     }
     private func setupTableView() {
         //newsTableView.register(UINib.init(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     private func setupTableViewBinding() {
         
-        viewModel?.dataObservable?.bind(to: newsTableView.rx.items(cellIdentifier: cellIdentifier, cellType: NewsTableViewCell.self)){ (row , element , cell) in
+        viewModel?.dataObservable?.bind(to: newsTableView.rx.items(cellIdentifier: cellIdentifier, cellType: NewsTableViewCell.self)){ [weak self] (row , element , cell) in
+            if row == 0 && self?.viewModel.title != nil{
+                self?.navigationItem.title = (self?.viewModel.title!)!
+            }
             cell.articleDetails = element
             //cell.configure(headLine: "element.title" , date: "element.publishedAt", imageURL: nil)
             var time = element.publishedAt.split(separator: "T").map(String.init)
             cell.configure(headLine: element.title , date: time[0], imageURL: element.urlToImage)
             
         }.disposed(by: disposeBag)
+        /*viewModel?.dataObservable?.do( onError: { (error) in
+            UIMethodsClass.showInternetConnectionAlert(viewController: self)
+            print(error)
+        })*/
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

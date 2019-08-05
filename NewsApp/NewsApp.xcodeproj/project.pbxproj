@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08D0DBED6CA7D26BDC9EC556 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEEEF25168DA957FAF87F49 /* Pods_NewsApp.framework */; };
+		BA10C90322F7A5F600ED0A20 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C90222F7A5F600ED0A20 /* CheckInternet.swift */; };
 		BA18317522F23948002E1153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18317422F23948002E1153 /* AppDelegate.swift */; };
 		BA18317722F23948002E1153 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18317622F23948002E1153 /* NewsListViewController.swift */; };
 		BA18317A22F23948002E1153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA18317822F23948002E1153 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		4DEEEF25168DA957FAF87F49 /* Pods_NewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4583698907ACA087FF38F8 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BA10C90222F7A5F600ED0A20 /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
 		BA18317122F23948002E1153 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA18317422F23948002E1153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA18317622F23948002E1153 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				BA54DA7922F34DA900644CA6 /* NetworkAccessClass.swift */,
 				BA54DA7B22F34DBE00644CA6 /* NetworkAccessProtocol.swift */,
+				BA10C90222F7A5F600ED0A20 /* CheckInternet.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				BA54DA8822F379FF00644CA6 /* News.swift in Sources */,
 				BA70AF6822F5FA0F004ACA91 /* DataAccess.swift in Sources */,
 				BA70AF6C22F62398004ACA91 /* FilterViewModel.swift in Sources */,
+				BA10C90322F7A5F600ED0A20 /* CheckInternet.swift in Sources */,
 				BA54DA8F22F37BD100644CA6 /* UIMethodsClass.swift in Sources */,
 				BA54DA8322F35A9200644CA6 /* NewsTableViewCell.swift in Sources */,
 				BA54DA7C22F34DBE00644CA6 /* NetworkAccessProtocol.swift in Sources */,
@@ -526,7 +530,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewsApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ember.NewsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -541,7 +548,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewsApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ember.NewsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
